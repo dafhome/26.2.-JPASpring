@@ -8,11 +8,11 @@
 		<version>3.3.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.tiendaplantas</groupId>
-	<artifactId>tienda_plantas</artifactId>
+	<groupId>com.empleado.persistencia</groupId>
+	<artifactId>empleado-persistencia</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>tienda_plantas</name>
-	<description>Gestor_Tienda_Plantas_JPA</description>
+	<name>empleado-persistencia</name>
+	<description>empleado-persistencia</description>
 	<url/>
 	<licenses>
 		<license/>

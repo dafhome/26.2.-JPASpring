@@ -1,10 +1,10 @@
-package com.tiendaplantas.tienda_plantas;
+package com.empleado.persistencia.empleado_persistencia;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class TiendaPlantasApplicationTests {
+class EmpleadoPersistenciaApplicationTests {
 
 	@Test
 	void contextLoads() {

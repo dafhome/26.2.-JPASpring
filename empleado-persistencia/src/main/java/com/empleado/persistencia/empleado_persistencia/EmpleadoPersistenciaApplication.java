@@ -1,13 +1,13 @@
-package com.tiendaplantas.tienda_plantas;
+package com.empleado.persistencia.empleado_persistencia;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class TiendaPlantasApplication {
+public class EmpleadoPersistenciaApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(TiendaPlantasApplication.class, args);
+		SpringApplication.run(EmpleadoPersistenciaApplication.class, args);
 	}
 
 }
