@@ -20,7 +20,8 @@ public class Empleados {
 
     @Id
     @Column(name = "id_Empleado")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    /* GenerationType.AUTO detecta y utiliza la estrategia en base a mi bd. con auto genera tabla index */
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long idEmpleado;
 
     @Column(name = "nombre_empleado")

@@ -29,5 +29,14 @@ public class EmpleadoServicio {
         return empleadoRepositorio.save(empleado);
     }
 
+    public Empleados verUnEmpleado(Long id){
+        return empleadoRepositorio.getReferenceById(id);
+    }
+
+    public void borrarEmpleado (Long id){
+        empleadoRepositorio.deleteById(id);
+    }
+
+ 
 
 }
