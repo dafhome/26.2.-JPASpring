@@ -1,6 +1,7 @@
 package com.empleado.persistencia.empleado_persistencia.services;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,28 +16,24 @@ public class EmpleadoServicio {
     private EmpleadoRepositorio empleadoRepositorio;
 
     public List<Empleados> consultarEmpleados(){
-        return (List<Empleados>) empleadoRepositorio.findAll();
+        return empleadoRepositorio.findAll();
     }
-
+    
+    public Optional<Empleados> verUnEmpleado(Long id){
+        return empleadoRepositorio.findById(id);
+    }
 
     /*
      * @param empleado
      * @return el registro del empleado
      */
-
     @SuppressWarnings("null")
     public Empleados registEmpleados(Empleados empleado){
         return empleadoRepositorio.save(empleado);
     }
 
-    public Empleados verUnEmpleado(Long id){
-        return empleadoRepositorio.getReferenceById(id);
-    }
-
     public void borrarEmpleado (Long id){
         empleadoRepositorio.deleteById(id);
     }
-
- 
 
 }

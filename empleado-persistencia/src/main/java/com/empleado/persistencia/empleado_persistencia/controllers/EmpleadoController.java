@@ -49,7 +49,7 @@ public class EmpleadoController {
     }
 
     @GetMapping("/listarId/{id}")
-    public Empleados listarId(@PathVariable Long id){
+    public Optional<Empleados> listarId(@PathVariable Long id){
         return servicioEmpleado.verUnEmpleado(id);
     }
 
@@ -69,15 +69,5 @@ public class EmpleadoController {
         return servicioEmpleado.registEmpleados (empleado);
     }
 
-    @PatchMapping("/actualizarNombreEmpleado/{id}")
-    public Empleados modificarUnEmpleado(@RequestBody EmpleadoDTO empleadoJson, @PathVariable Long id) {
-        Empleados empleado = new Empleados ();
-        empleado.setIdEmpleado(id);
-        empleado.setNombreEmpleado (empleadoJson.getNombreEmpleado()) ;
-        empleado.setDireccion (empleadoJson.getDireccion());
-        empleado.setEdad (empleadoJson.getEdad());
-        empleado.setPuesto (empleadoJson.getPuesto());
-        return servicioEmpleado.registEmpleados (empleado);
-    }
 
 }
