@@ -18,31 +18,24 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "empleado")
+@Table (name = "salario")
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Empleados {
-
+public class Salario {
     @Id
-    @Column(name = "id_Empleado")
-    /*
-     * GenerationType.AUTO detecta y utiliza la estrategia en base a mi bd. con auto
-     * genera tabla index
-     */
     @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long idSalario;
+
+    @Column(name = "id_Empleado")
     private Long idEmpleado;
 
-    @Column(name = "nombre_empleado")
-    private String nombreEmpleado;
+    private int salario;
 
-    private String direccion;
-    private int edad;
-    private String puesto;
-    
     @JsonProperty(access = Access.READ_ONLY)
     @Column(name = "fecha_actualizacion")
     private LocalDateTime fechaActualizacion;
+
 
     @PrePersist
     protected void onCreate() {

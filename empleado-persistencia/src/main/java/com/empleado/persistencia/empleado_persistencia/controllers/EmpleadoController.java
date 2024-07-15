@@ -6,7 +6,6 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
@@ -14,10 +13,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.empleado.persistencia.empleado_persistencia.dto.EmpleadoDTO;
 import com.empleado.persistencia.empleado_persistencia.entidades.Empleados;
 import com.empleado.persistencia.empleado_persistencia.services.EmpleadoServicio;
-import com.empleado.persistencia.empleado_persistencia.dto.*;
-import org.springframework.web.bind.annotation.RequestParam;
 
 
 @RestController
@@ -53,7 +51,7 @@ public class EmpleadoController {
         return servicioEmpleado.verUnEmpleado(id);
     }
 
-    @DeleteMapping("/borrarId/{id}")
+    @DeleteMapping("/borrarIdEmpleado/{id}")
     public void borrarId(@PathVariable Long id){
         servicioEmpleado.borrarEmpleado(id);
     }
