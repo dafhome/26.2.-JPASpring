@@ -1,5 +1,7 @@
 package com.empleado.persistencia.empleado_persistencia.entidades;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.annotation.Generated;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
@@ -33,8 +35,11 @@ public class Taquillas {
     
     private boolean ocupada;
 
-    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
-    @JoinColumn(name = "id_empleado", referencedColumnName = "id_Empleado")
+    // @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
+    // @JoinColumn(name = "id_empleado", referencedColumnName = "id_Empleado")
+        //falta conectarlo con Empleados
+    @OneToOne(mappedBy = "taquilla")
+    @JsonIgnore //frenar recursividad en el json
     private Empleados empleadomap;
 
 }

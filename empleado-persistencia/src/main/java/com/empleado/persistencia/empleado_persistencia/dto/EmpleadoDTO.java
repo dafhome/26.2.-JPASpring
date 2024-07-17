@@ -1,7 +1,5 @@
 package com.empleado.persistencia.empleado_persistencia.dto;
 
-import com.empleado.persistencia.empleado_persistencia.entidades.Taquillas;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 

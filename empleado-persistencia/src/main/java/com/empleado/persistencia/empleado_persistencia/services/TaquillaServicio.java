@@ -32,4 +32,6 @@ public class TaquillaServicio {
         taquillaRepositorio.deleteById(id);
         System.out.println("Taquilla Borrada Correctamente");
     }
+    
+
 }

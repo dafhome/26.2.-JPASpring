@@ -58,7 +58,7 @@ public class Empleados {
     protected void onUpdate() {
         fechaActualizacion = LocalDateTime.now();
     }
-
-    @OneToOne(mappedBy = "empleadomap", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToOne
+    @JoinColumn(name="taquilla_id", referencedColumnName = "id_taquilla")
     private Taquillas taquilla;
 }
